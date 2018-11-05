@@ -1,32 +1,166 @@
-@import url('some google sans-serif font');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 *::after,
-*::before{
+*::before {
     box-sizing: inherit;
 }
-html{
+
+html {
     font-size: 20px;
     line-height: 1.5;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-main{
+
+main {
     width: 90%;
     margin: 0 auto;
     border: 1px solid #aaa;
 }
 
-input#min.price::after{
-    content: "$" attr(data-price);
-    display: block;
-    margin-top: -1.5rem;
+header {
+    background-image: url(../img/yellow.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-input.price#max::after{
-    content: "$" attr(data-price);
+
+h1 {
+    position: relative;
+    top: 1.5rem;
+    padding-top: 1rem;
+    height: 150px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: hsla(100deg, 0%, 100%, 0.1);
+    box-shadow: 2px 2px 10px
+}
+
+h1 img {
+    padding: 0.5rem;
+    width: 100px;
+    height: 100px;
+}
+
+span {
+    color: white;
+    font-size: 4rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "a a"
+        "b c"
+        "e f"
+        "g h";
+}
+
+.place {
+    grid-area: a;
+}
+
+.check-in {
+    grid-area: b;
+}
+
+.check-out {
+    grid-area: c;
+}
+
+.min-price {
+    grid-area: e;
+}
+
+.max-price {
+    grid-area: f;
+}
+
+div {
+    margin: 0.5rem 0.4rem;
+}
+
+input#min.price::after {
+    content: "$"attr(data-price);
     display: block;
-    margin-top: -1.5rem;
+    margin-top: -1.7rem;
+    font-size: 1rem;
+}
+
+input.price#max::after {
+    content: "$"attr(data-price);
+    display: block;
+    margin-top: -1.7rem;
+}
+
+input {
+    font-size: 1rem;
+    width: 100%;
+    font-weight: 300;
+    padding-left: 0.5rem;
+}
+
+label {
+    display: block;
+}
+
+.search {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.1rem 0.5rem;
+    background-color: hsl(45deg, 94%, 49%);
+    color: hsl(100deg, 0%, 100%);
+}
+
+@media (max-width:600px) {
+    html {
+        font-size: 15px;
+    }
+
+    span {
+        color: white;
+        font-size: 3rem;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 0.1rem;
+    }
+}
+
+@media (min-width:1000px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header {
+        width: 550px;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%;
+    }
 }
