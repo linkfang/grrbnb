@@ -91,11 +91,11 @@ div {
 }
 
 div:nth-of-type(3) {
-    margin: 0.75rem 0.5rem 0.5rem 0rem;
+    margin: 0.75rem 0.5rem 0.75rem 0rem;
 }
 
 div:nth-of-type(5) {
-    margin: 0.75rem 0.5rem 0.5rem 0rem;
+    margin: 0.75rem 0.5rem 0.75rem 0rem;
 }
 
 input#min.price::after {
@@ -163,6 +163,13 @@ button {
     label {
         margin-bottom: 0.1rem;
     }
+        div:nth-of-type(3) {
+        margin: 0.75rem 0.5rem;
+    }
+
+    div:nth-of-type(5) {
+        margin: 0.75rem 0.5rem;
+    }
 }
 
 @media (min-width:1000px) {
@@ -203,4 +210,5 @@ button {
     form {
         width: 100%;
     }
+
 }
